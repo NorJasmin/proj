@@ -7,17 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace proj.Models
+namespace proj
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Staff
+    public partial class C__MigrationHistory
     {
-        public string Email { get; set; }
-        public string PhoneNumber { get; set; }
-        public string FullName { get; set; }
-        public string Address { get; set; }
-        public string Image { get; set; }
+        public string MigrationId { get; set; }
+        public string ContextKey { get; set; }
+        public byte[] Model { get; set; }
+        public string ProductVersion { get; set; }
     }
 }

@@ -59,10 +59,10 @@ namespace proj
             //   appSecret: "");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+           // {
+              //  ClientId = "",
+               // ClientSecret = ""
+           // });
         }
     }
 }
