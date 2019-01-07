@@ -6,13 +6,13 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using proj.Models;
+using proj;
 
 namespace proj.Controllers
 {
     public class StaffsController : Controller
     {
-        private dbconEntities db = new dbconEntities();
+        private Model1 db = new Model1();
 
         // GET: Staffs
         public ActionResult Index()
@@ -21,7 +21,7 @@ namespace proj.Controllers
         }
 
         // GET: Staffs/Details/5
-        public ActionResult Details(string id)
+        public ActionResult Details(int? id)
         {
             if (id == null)
             {
@@ -46,7 +46,7 @@ namespace proj.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Email,PhoneNumber,FullName,Address,Image")] Staff staff)
+        public ActionResult Create([Bind(Include = "Id,Email,PhoneNumber,FullName,Address,Image")] Staff staff)
         {
             if (ModelState.IsValid)
             {
@@ -59,7 +59,7 @@ namespace proj.Controllers
         }
 
         // GET: Staffs/Edit/5
-        public ActionResult Edit(string id)
+        public ActionResult Edit(int? id)
         {
             if (id == null)
             {
@@ -78,7 +78,7 @@ namespace proj.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Email,PhoneNumber,FullName,Address,Image")] Staff staff)
+        public ActionResult Edit([Bind(Include = "Id,Email,PhoneNumber,FullName,Address,Image")] Staff staff)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +90,7 @@ namespace proj.Controllers
         }
 
         // GET: Staffs/Delete/5
-        public ActionResult Delete(string id)
+        public ActionResult Delete(int? id)
         {
             if (id == null)
             {
@@ -107,7 +107,7 @@ namespace proj.Controllers
         // POST: Staffs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(int id)
         {
             Staff staff = db.Staffs.Find(id);
             db.Staffs.Remove(staff);
