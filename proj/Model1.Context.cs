@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace proj.Models
+namespace proj
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class dbconEntities : DbContext
+    public partial class Entities4 : DbContext
     {
-        public dbconEntities()
-            : base("name=dbconEntities")
+        public Entities4()
+            : base("name=Entities4")
         {
         }
     
@@ -25,6 +25,16 @@ namespace proj.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
+        public virtual DbSet<AspNetRole> AspNetRoles { get; set; }
+        public virtual DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
+        public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
+        public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
+        public virtual DbSet<Fee> Fees { get; set; }
         public virtual DbSet<Staff> Staffs { get; set; }
+        public virtual DbSet<Stud> Studs { get; set; }
+        public virtual DbSet<Father> Fathers { get; set; }
+        public virtual DbSet<Mother> Mothers { get; set; }
+        public virtual DbSet<Att> Atts { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿@model proj.Models.Staff
+﻿@model proj.Staff
 
 @{
     ViewBag.Title = "Details";
@@ -10,6 +10,14 @@
     <h4>Staff</h4>
     <hr />
     <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
         <dt>
             @Html.DisplayNameFor(model => model.PhoneNumber)
         </dt>
@@ -34,17 +42,11 @@
             @Html.DisplayFor(model => model.Address)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Image)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Image)
-        </dd>
+       
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Email }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
